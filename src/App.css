@@ -1,38 +1,464 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding: 19px;
+}
+/* *****LOGO***** */
+.logo-container {
+  width: 192px;
+  height: 192px;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+.element1Container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 5px;
+}
+.element2Container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: -0.5px;
+}
+.element1 {
+  flex: 0 0 76px;
+  height: 90px;
+  overflow: hidden;
+  position: relative;
+}
+.element2 {
+  flex: 0 0 76px;
+  height: 90px;
+  overflow: hidden;
+  position: relative;
+}
+.elementRect {
+  width: 100px;
+  height: 60px;
+  margin: 23px 0 0 3px;
+  background: #e3f3e3;
+  transform: rotate(-35deg);
+}
+.elementTri {
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  top: 62px;
+  left: -60px;
+  background: #5e9c60;
+  transform: rotate(-55.5deg);
+}
+/* ***** Button **** */
+.btnGreen {
+  width: 100%;
+  background-color: #5e9c60;
+  border: none;
+  height: 46px;
+  border-radius: 0.7rem;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btnGreen:focus {
+  background-color: #7ebe80;
+  outline: 0 !important;
+  border: 0px solid transparent !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ***** LogIN ***** */
+.logIn {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.logIn h2 {
+  line-height: 0;
+}
+.logIn h4 {
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 0;
+}
+.logIn p {
+  color: #eb5757;
+  line-height: 0;
+  font-size: 15px;
+}
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: none;
+}
+.inputForm input {
+  border: none;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.38);
+  padding: 0.5rem;
+  margin-top: 2.5rem;
+  font-size: 14px;
+}
+.inputForm :focus {
+  outline: none;
+  border-bottom: 2px solid #5e9c60;
+}
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+}
+.left h5 {
+  color: #5e9c60;
+  margin: 3rem 0 3rem 0;
 }
 
-.App-link {
-  color: #61dafb;
+.logIn h5 {
+  color: rgba(0, 0, 0, 0.7);
+  margin: 3rem 0 3rem 0;
+}
+#pass {
+  color: #5e9c60;
+  cursor: pointer;
+}
+#reg {
+  color: #5e9c60;
+  cursor: pointer;
+}
+/* ***** Wallet ***** */
+.wallet {
+  border: 1px solid transparent;
+  margin-bottom: 83px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.wLogo {
+  position: absolute;
+  margin-left: -65px;
+  margin-top: -50px;
+}
+
+.curBalance {
+  text-align: center;
+  margin: 7rem 0 3rem 0;
+}
+.curBalance h2 {
+  font-size: 16px;
+  line-height: 19.2px;
+}
+.curBalance h1 {
+  color: #5e9c60;
+  line-height: 36px;
+}
+#curency {
+  font-size: 16px;
+  margin-left: 0.5rem;
+}
+.walletButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.walletButtons a {
+  text-decoration: none;
+}
+.income {
+  flex: 0 0 174px;
+  min-width: 174px;
+  height: 60px;
+  background-color: rgba(242, 249, 242, 1);
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #5e9c60;
+  font-size: 14px;
+}
+.income button {
+  background-color: #d9efd9;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 0.8rem;
+  color: #5e9c60;
+  font-size: 36px;
+}
+.expensesScr {
+  margin-bottom: 120px;
+}
+.expenses {
+  flex: 0 0 174px;
+  min-width: 174px;
+  height: 60px;
+  background-color: #fdecec;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #e35959;
+  font-size: 14px;
+}
+.expenses button {
+  background-color: #f9c4c4;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 0.8rem;
+  color: #e35959;
+  font-size: 36px;
+}
+
+.history {
+  margin-top: 39.5px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.history h3 {
+  color: #1c092c;
+  font-size: 14px;
+  margin-bottom: 26px;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+.dateIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+}
+.dateIcon img {
+  width: 28px;
+  height: 28px;
+}
+.date {
+  margin-top: 0.5rem;
+}
+.date h2 {
+  font-size: 16px;
+  line-height: 0;
+  font-weight: 600;
+  text-align: center;
+}
+.date h6 {
+  font-size: 10px;
+  line-height: 0;
+  font-weight: 400;
+  margin-top: -0.05rem;
+  text-align: center;
+}
+.amount {
+  margin-top: -0.7rem;
+}
+.amount h5 {
+  font-size: 14px;
+  line-height: 0;
+  font-weight: 400;
+  text-align: right;
+}
+.amount h2 {
+  font-size: 12px;
+  line-height: 0;
+  font-weight: 600;
+  margin-top: -0.5rem;
+  text-align: right;
+}
+/* ***** Navigation ***** */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 83px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  -webkit-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.04);
+  box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.04);
+  background-color: white;
+}
+.nav a {
+  text-decoration: none;
+  color: #000000;
+}
+.nav p {
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+.navItem {
+  text-align: center;
+  padding: 0 3rem 0 3rem;
+}
+
+/* ***** Expenses ***** */
+.expensesScr {
+  padding: 0.5rem;
+}
+.expensesScr h2 {
+  font-size: 16px;
+}
+.expensesHead {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 2rem;
+}
+.expCategory {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.itemCat {
+  height: 51px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.descIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.iconCat {
+  margin-left: 10px;
+}
+.iconCat img {
+  width: 34px;
+}
+.desc {
+  margin-top: 0.5rem;
+}
+.desc h2 {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.desc h6 {
+  font-size: 12px;
+  line-height: 0px;
+  font-weight: 400;
+  margin-top: -0.05rem;
+}
+
+/* ***** RADIO ***** */
+.radioBtn {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radioBtn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 12px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+.radioBtn:hover input ~ .checkmark {
+  border: 2px solid #5e9c60;
+}
+
+.radioBtn input:checked ~ .checkmark {
+  border: 2px solid #5e9c60;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radioBtn input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radioBtn .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #5e9c60;
+}
+
+/* **** More **** */
+
+.moreScr img {
+  width: 99.5%;
+  text-align: center;
+  margin-top: 30%;
+}
+.moreScr h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 76px;
+  text-align: center;
+}
+.moreScr p {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+@media screen and (max-width: 375px) {
+  .income {
+    flex: 0 0 160px;
+    min-width: 160px;
+    height: 60px;
   }
-  to {
-    transform: rotate(360deg);
+  .income button {
+    width: 44px;
+    height: 44px;
+  }
+  .expenses {
+    flex: 0 0 160px;
+    min-width: 160px;
+  }
+  .expenses button {
+    width: 44px;
+    height: 44px;
+  }
+}
+@media screen and (max-height: 736px) {
+  .moreScr img {
+    margin-top: 10%;
   }
 }
