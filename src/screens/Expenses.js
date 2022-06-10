@@ -15,8 +15,6 @@ const Expenses = (props) => {
 
     AuthService.fetchNewTransaction(payload).then(
       (res) => {
-        console.log(res);
-
         history.push("/");
         history.go("/");
       },
@@ -47,14 +45,13 @@ const Expenses = (props) => {
           placeholder="Enter description"
           type="text"
           onChange={(e) => setValues({ ...outcomeValues, description: e.target.value })}
-          required
         ></input>
       </div>
       <div className="expCategory">
         <h2>Choose category</h2>
         {props.outcome ? props.outcome.map((d) => <Category data={d} reciveProps={reciveProps} key={d.id} />) : null}
       </div>
-      {!outcomeValues ? null : Object.keys(outcomeValues).length === 4 ? (
+      {!outcomeValues ? null : Object.keys(outcomeValues).length === 3 ? (
         <button className="btnGreen" style={btnStyle} onClick={onSubmint}>
           Add an expense
         </button>

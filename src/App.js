@@ -7,6 +7,7 @@ import Income from "./screens/Income.js";
 import Navigation from "./components/Navigation.js";
 import More from "./screens/More.js";
 import AuthService from "./services/auth-service.js";
+import Stats from "./screens/Stats";
 
 const App = () => {
   const [authenticated, setAuthentication] = useState();
@@ -27,14 +28,14 @@ const App = () => {
 
   const transactionsHistory = () => {
     AuthService.fetchHistory().then((res) => {
-      setTransactions({ history: res.data.transactions, summary: res.data.summary });
+      let transactions = { history: res.data.transactions, summary: res.data.summary }
+      setTransactions(transactions);
     });
   };
 
   useEffect(() => {
     let parsedUser = localStorage.getItem("user");
     setAuthentication(parsedUser !== null ? JSON.parse(parsedUser) : undefined);
-
     outcomeCat();
     incomeCat();
     transactionsHistory();
@@ -57,7 +58,9 @@ const App = () => {
         <Route path="/expenses">
           <Expenses outcome={outcome} />
         </Route>
-
+        <Route path="/stats">
+          <Stats  />
+        </Route>
         <Route path="/more">
           <More />
         </Route>

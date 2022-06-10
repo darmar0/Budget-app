@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import Wallet from "../icons/account_balance_wallet_black_24dp 1.png";
 import Stats from "../icons/query_stats_black_24dp 1.png";
 import More from "../icons/menu_black_24dp 1.png";
@@ -8,9 +8,9 @@ import StatsG from "../icons/green stats.png";
 import MoreG from "../icons/green more.png";
 
 const Navigation = () => {
-  const [path, setPath] = useState("/");
+  const [path, setPath] = useState(useLocation().pathname);
 
-  return (
+    return (
     <div className="nav">
       <NavLink to="/" onClick={() => setPath("/")}>
         <div className="navItem">

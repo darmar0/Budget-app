@@ -1,10 +1,10 @@
 import React from "react";
 
 const History = (props) => {
-  const outCat = props.outcome.filter((i) => i.id === props.data.category)[0];
-  const inCat = props.income.filter((i) => i.id === props.data.category)[0];
+  const outCat = props.outcome?.filter((i) => i.id === props.data.category)[0];
+  const inCat = props.income?.filter((i) => i.id === props.data.category)[0];
   const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  const date = props.data.created.split("")[8] + props.data.created.split("")[9];
+  const date = props.data?.created.split("")[8] + props.data.created.split("")[9];
   const month = parseInt(props.data.created.split("")[5] + props.data.created.split("")[6]) - 1;
 
   return (

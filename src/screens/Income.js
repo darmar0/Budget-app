@@ -55,7 +55,7 @@ const Income = (props) => {
           <Category data={d} key={d.id} reciveProps={reciveProps} />
         ))}
       </div>
-      {!incomeValues ? null : Object.keys(incomeValues).length === 4 ? (
+      {!incomeValues ? null : Object.keys(incomeValues).length === 3 ? (
         <button className="btnGreen" style={btnStyle} onClick={onSubmint}>
           Add an income
         </button>
