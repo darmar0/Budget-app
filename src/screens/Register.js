@@ -75,9 +75,6 @@ const Register = () => {
                         <input placeholder="Password*" type="password" onChange={(e) => getPassword(e)}></input>
                         <span style={{color: "red", fontSize: 10, paddingTop: 5}}>{error["password"]}</span>
                     </div>
-                    <div className="left">
-                        <h5 id="pass">Forgot password?</h5>
-                    </div>
                     <button className="btnGreen" onClick={onRegister}>
                         Register
                     </button>

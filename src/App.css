@@ -81,6 +81,7 @@ body {
     color: #ffffff;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 4rem
 }
 
 .btnGreen:focus {
