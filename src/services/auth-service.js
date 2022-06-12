@@ -16,7 +16,9 @@ class AuthService {
     static login(payload) {
         return axios.post("https://budgetapp.digitalcube.rs/api/tenants/4db498e8-c92c-4325-89a5-013110d3687f/sessions", payload);
     }
-
+    static register(payload) {
+        return axios.post("https://budgetapp.digitalcube.rs/api/tenants/4db498e8-c92c-4325-89a5-013110d3687f/users", payload);
+    }
     static logout() {
         return axios
             .delete("https://budgetapp.digitalcube.rs/api/tenants/4db498e8-c92c-4325-89a5-013110d3687f/sessions", headers)
